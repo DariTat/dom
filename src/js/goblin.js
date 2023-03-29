@@ -9,6 +9,8 @@ function changePosition() {
   const goblin = document.querySelector(".goblin");
   const posGoblin = position.indexOf(goblin);
   const ran = Math.floor(Math.random() * position.length);
-  position[posGoblin].classList.remove("goblin");
-  position[ran].classList.add("goblin");
+  if (posGoblin !== ran) {
+    position[posGoblin].classList.remove("goblin");
+    position[ran].classList.add("goblin");
+  }
 }
